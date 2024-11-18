@@ -14,7 +14,7 @@ const Customer = () => {
     useEffect(() => {
         const fetchTickets = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/tickets', {
+                const response = await axios.get('https://helpdesk-1enh.onrender.com/api/tickets', {
                     headers: {'Authorization': `Bearer ${localStorage.getItem('token')}`,
                 'Content-Type': 'application/json'},
                 });

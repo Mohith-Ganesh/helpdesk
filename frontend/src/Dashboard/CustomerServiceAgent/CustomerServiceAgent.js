@@ -12,7 +12,7 @@ const CustomerServiceAgent = () => {
     // Fetch Tickets
     const fetchTickets = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/tickets/all', {
+            const response = await axios.get('https://helpdesk-1enh.onrender.com/api/tickets/all', {
                 headers: { Authorization: `Bearer ${localStorage.getItem('token')}`,
             'Content-Type': 'application/json' },
             });
@@ -25,7 +25,7 @@ const CustomerServiceAgent = () => {
     // Fetch Customers
     const fetchCustomers = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/auth/customers', {
+            const response = await axios.get('https://helpdesk-1enh.onrender.com/api/auth/customers', {
                 headers: { Authorization: `Bearer ${localStorage.getItem('token')}`,
                 'Content-Type': 'application/json' }, 
             });

@@ -23,7 +23,7 @@ export const Signup = () => {
             event.preventDefault();
             try {
                 console.log('hii');
-                const response = await axios.post('http://localhost:5000/api/auth/register', {
+                const response = await axios.post('https://helpdesk-1enh.onrender.com/api/auth/register', {
                     name: userName,
                     email: userEmail, 
                     password: password,

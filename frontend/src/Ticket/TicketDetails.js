@@ -7,7 +7,7 @@ const TicketDetails = ({ ticket, addNoteToTicket }) => {
     const handleAddNote = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post(`http://localhost:5000/api/tickets/${ticket._id}/notes`, { message: note }, {
+            const response = await axios.post(`https://helpdesk-1enh.onrender.com/api/tickets/${ticket._id}/notes`, { message: note }, {
                 headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}`,
                 'Content-Type': 'application/json'  },
             });

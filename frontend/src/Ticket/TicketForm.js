@@ -7,7 +7,7 @@ const TicketForm = ({ addTicket }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/api/tickets/create', { title }, {
+            const response = await axios.post('https://helpdesk-1enh.onrender.com/api/tickets/create', { title }, {
                 headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}`,
                 'Content-Type': 'application/json' },
             });

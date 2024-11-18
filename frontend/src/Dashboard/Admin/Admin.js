@@ -16,7 +16,7 @@ const Admin = () => {
 
   const fetchTickets = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/tickets/all', {
+      const response = await axios.get('https://helpdesk-1enh.onrender.com/api/tickets/all', {
         headers: { 
           'Authorization': `Bearer ${localStorage.getItem('token')}`,
           'Content-Type': 'application/json' 
@@ -30,7 +30,7 @@ const Admin = () => {
 
   const fetchCustomers = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/auth/customers", {
+      const response = await axios.get("https://helpdesk-1enh.onrender.com/api/auth/customers", {
         headers: { 
           'Authorization': `Bearer ${localStorage.getItem('token')}`,
           'Content-Type': 'application/json' 
@@ -44,7 +44,7 @@ const Admin = () => {
 
   const handleStatusChange = async (ticketId, newStatus) => {
     try {
-      await axios.put(`http://localhost:5000/api/tickets/${ticketId}`, { status: newStatus });
+      await axios.put(`https://helpdesk-1enh.onrender.com/api/tickets/${ticketId}`, { status: newStatus });
       fetchTickets(); // Refresh tickets
     } catch (err) {
       console.error("Error updating ticket status:", err.message);
